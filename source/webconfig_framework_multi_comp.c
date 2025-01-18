@@ -429,12 +429,7 @@ void rollbackLastExec(char* subdoc_name)
               		UnSubscribeFromEvent(SLAVE_COMP_SIGNAL_NAME);
               		// For RBUS unreg is called from eventSubHandler callback
           	}
-          	else
-          	{
-              		UnregisterFromEvent(SLAVE_COMP_SIGNAL_NAME);
-          	}
     	}
-      	return ;
 }
 
 /*************************************************************************************************************************************
@@ -534,10 +529,6 @@ void sendBlobExecutionResult(char* subdoc_name, int exec_status, int execRet, ch
             	{
                 	UnSubscribeFromEvent(SLAVE_COMP_SIGNAL_NAME);
                 	// For RBUS unreg is called from eventSubHandler callback
-            	}
-            	else
-            	{
-                	UnregisterFromEvent(SLAVE_COMP_SIGNAL_NAME);
             	}
       	}
 }
